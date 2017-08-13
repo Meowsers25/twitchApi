@@ -51,10 +51,10 @@ $(document).ready(function() {
                     success: function(data1) {
                         //console.log(data1);
                         if (data1.stream === null) {
-                            $("#input").append('<img src=' + logo + '>' + '  ' + '<a href=' + channel + '>' + name + '</a> is offline...<br>');
+                            $("#input").append('<img class="icon" src=' + logo + '>' + '  ' + '<a href=' + channel + '>' + name + '</a> is offline...<br>');
                         }
                         else {
-                            $("#input").append('<img src=' + logo + '>' + '  ' + '<a href=' + channel + '>' + name + '</a> is online !!<br>');
+                            $("#input").append('<img class="icon" src=' + logo + '>' + '  ' + '<a href=' + channel + '>' + name + '</a> is online !!<br>');
                         }
 
                     },
