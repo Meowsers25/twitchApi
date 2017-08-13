@@ -36,6 +36,7 @@ $(document).ready(function(){
        success: function(response){
            console.log(response);
            
+           var channel = response.url;
            var logo = response.logo;
            var name = response.name;
            var url2 = "https://api.twitch.tv/kraken/streams/" + response.name;
@@ -49,9 +50,9 @@ $(document).ready(function(){
                success: function(data1){
                    //console.log(data1);
                    if(data1.stream === null) {
-                       $("#input").append(name + ' is offline<br>');
+                       $("#input").append('<img src=' + logo + '>' + '  ' + '<a href=' + channel + '>' + name + '</a> is offline...<br>');
                    } else {
-                       $("#input").append(name + ' is online!!<br>');
+                       $("#input").append('<img src=' + logo + '>' + '  ' + '<a href=' + channel + '>' + name + '</a> is online !!<br>');
                    }
                   
                },
