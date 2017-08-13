@@ -3,11 +3,13 @@
     border: red solid 2px;
     border-radius: 25px;
 }
+
 img {
     height: 50px;
     width: 50px;
     border-radius: 20px;
 }
+
 li {
     font-family: 'Nunito', sans-serif;
     font-size: 35px;
