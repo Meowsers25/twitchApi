@@ -35,15 +35,13 @@ $(document).ready(function() {
             type: "GET",
             dataType: "json",
             success: function(response) {
-                console.log(response);
-
+                //console.log(response);
                 var channel = response.url;
                 var logo = response.logo;
                 var name = response.name;
                 var url2 = "https://api.twitch.tv/kraken/streams/" + response.name;
-                console.log(name);
+                //console.log(name);
                 $.ajax({
-
                     url: url2,
                     data: data,
                     type: "GET",
@@ -56,16 +54,16 @@ $(document).ready(function() {
                         else {
                             $("#input").append('<img class="icon" src=' + logo + '>' + '  ' + '<a href=' + channel + '>' + name + '</a> is online !!<br>');
                         }
-
                     },
                     error: function(err) {
-                        $("#input").append(name + ' doesn\'t exist'); //this doesn't work
+                        //     $("#input").append(name + ' doesn\'t exist'); //this doesn't work
+                        console.log("ERROR");
                     }
                 });
             },
             error: function(err) {
-                alert('no');
+                $("#input").append("Invalid user.... Not found.<br>");
             }
         }); //ajax
-    }; //for loop
+    } //for loop
 }); //end
