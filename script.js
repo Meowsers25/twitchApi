@@ -6,7 +6,7 @@ $(document).ready(function() {
     var url = "https://api.twitch.tv/kraken/streams/freecodecamp?";
 
     var data = {
-        client_id: key
+        client_id: key //insert your API key here
     };
 
     $.ajax({
